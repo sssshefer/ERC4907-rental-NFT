@@ -36,6 +36,21 @@ contract ERC4907 is ERC721, IERC4907 {
     }
 
     function userExpires(uint tokenId) external view returns (uint){
-        return user[tokenId].expires;
+        return users[tokenId].expires;
+    }
+
+     function _beforeTokenTransfer(
+        address from, 
+        address to,
+        uint256 tokenId,
+        uint batchSize
+    ) internal virtual override{
+        super._beforeTokenTransfer(from,to, tokenId, batchSize);
+        
+        if(from != to && _users[tokenId].user != address(0)){
+            delete users[tokenId];
+
+            emit UpdateUser(tokenId, address(0), 0);
+        }
     }
 }
