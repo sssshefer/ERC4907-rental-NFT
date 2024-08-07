@@ -66,3 +66,6 @@ To run this project locally, follow these steps:
     ```bash
     npx hardhat test
     ```
+<a href="https://ru.freepik.com/free-vector/flat-design-nft-concept-illustration_13862491.htm#fromView=search&page=1&position=33&uuid=b0eab404-da8d-46b7-8df6-84d90b7209cd">The pic is from freepik</a>
+
+***Happy hacking***
