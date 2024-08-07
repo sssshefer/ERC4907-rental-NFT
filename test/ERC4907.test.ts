@@ -1,4 +1,4 @@
-import { loadFixture, ethers, expect } from "./setup";
+import { loadFixture, ethers, expect, time } from "./setup";
 import type { ERC4907Demo } from "../typechain-types";
 
 describe("ERC4907 tests", function () {
@@ -29,7 +29,7 @@ describe("ERC4907 tests", function () {
     const expires = Math.floor(Date.now() / 1000) + 1; // 1 second from now
 
     await erc4907demo.connect(owner).setUser(tokenId, addr1.address, expires);
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    await time.increase(2);
 
     expect(await erc4907demo.userOf(tokenId)).to.equal(ethers.ZeroAddress);
   });
