@@ -1,4 +1,4 @@
-<img src="https://github.com/user-attachments/assets/4c01337f-8df3-43ba-ac39-5021d57da2e7"/>
+<img src="https://github.com/user-attachments/assets/25f096aa-c1bb-4479-9319-b025eefb04ea"/>
 
 # ERC4907-rental-NFT
 
